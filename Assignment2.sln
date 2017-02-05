@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2", "Assignment2\Assignment2.csproj", "{36F793DD-0B8F-4223-8D4C-FCFBB1786DCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatLibrary", "ChatLibrary\ChatLibrary.csproj", "{C089E081-0AFC-4F9A-AD02-8EF6715C0AF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogLibrary", "LogLibrary\LogLibrary.csproj", "{58CE1692-201B-4C1A-8014-618C0D66BF0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C089E081-0AFC-4F9A-AD02-8EF6715C0AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C089E081-0AFC-4F9A-AD02-8EF6715C0AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C089E081-0AFC-4F9A-AD02-8EF6715C0AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CE1692-201B-4C1A-8014-618C0D66BF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CE1692-201B-4C1A-8014-618C0D66BF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CE1692-201B-4C1A-8014-618C0D66BF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CE1692-201B-4C1A-8014-618C0D66BF0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

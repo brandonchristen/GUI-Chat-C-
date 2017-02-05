@@ -1,0 +1,4 @@
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\bin\Debug\LogLibrary.dll
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\bin\Debug\LogLibrary.pdb
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\obj\Debug\LogLibrary.dll
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\obj\Debug\LogLibrary.pdb

@@ -109,12 +109,14 @@
             // 
             // btnSend
             // 
+            this.btnSend.Enabled = false;
             this.btnSend.Location = new System.Drawing.Point(522, 387);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(114, 20);
             this.btnSend.TabIndex = 3;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label2
             // 
