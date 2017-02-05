@@ -23,7 +23,7 @@ namespace Assignment2
 
         public Form1()
         {
-            FileName = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss")+".log";
+            FileName = "E:\\" + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss")+".log";
             client.MessageHandler += new ChatLibrary.MessageReceivedEventHandler(newMessage);
             InitializeComponent();
         }
@@ -55,7 +55,7 @@ namespace Assignment2
             {
 
                 txtConvo.Text += "\n" + "Server: " + message;
-                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + "Server: " + message + "\n";
+                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Server: " + message + "\n";
                 logger.WriteMessage(FileName, line);
             }));
             }
@@ -63,7 +63,7 @@ namespace Assignment2
             else
             {
                 txtConvo.Text += "\n" + "Server: " + message;
-                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + "Server: " + message + "\n";
+                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Server: " + message + "\n";
                 logger.WriteMessage(FileName, line);
             }
         }
@@ -72,9 +72,10 @@ namespace Assignment2
         {
             string UserMessage = txtMessage.Text;
             txtConvo.Text += "\n" + "Client: " + UserMessage;
-            line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + "Client: " + UserMessage + "\n";
+            line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Client: " + UserMessage + "\n";
             logger.WriteMessage(FileName, line);
             client.Talk(UserMessage);
+            txtMessage.Clear();
         }
     }
 }
