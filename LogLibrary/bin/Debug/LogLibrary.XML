@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LogLibrary</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:LogLibrary.Logger.WriteMessage(System.String,System.String)" -->
+    </members>
+</doc>

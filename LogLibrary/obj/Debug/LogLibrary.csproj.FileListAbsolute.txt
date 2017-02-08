@@ -2,3 +2,5 @@ E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibra
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\bin\Debug\LogLibrary.pdb
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\obj\Debug\LogLibrary.dll
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\obj\Debug\LogLibrary.pdb
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\bin\Debug\LogLibrary.XML
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\LogLibrary\obj\Debug\LogLibrary.csprojResolveAssemblyReference.cache

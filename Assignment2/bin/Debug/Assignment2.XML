@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assignment2</name>
+    </assembly>
+    <members>
+        <member name="M:Assignment2.Form1.#ctor">
+            <summary>
+            Starts the application and also writes to the log
+            </summary>
+        </member>
+        <member name="M:Assignment2.Form1.exit_click(System.Object,System.EventArgs)">
+            <summary>
+            Exit the application safely
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.connect_click(System.Object,System.EventArgs)">
+            <summary>
+            Connects to the server, 
+            writes a line into the log file
+            and starts a thread listining for incoming messages from server
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.disconnect_click(System.Object,System.EventArgs)">
+            <summary>
+            Disconnect from the server, and write a line in the file
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.newMessage(System.Object,ChatLibrary.MessageArgs)">
+            <summary>
+            When a message is recieved display it in txtConvo
+            prepare a line to be written into the text file
+            write a line to the log file
+            </summary>
+            <param name="sender"></param>
+            <param name="MessageArguments"></param>
+        </member>
+        <member name="M:Assignment2.Form1.btnSend_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows client message in txtConvo
+            prepare a line to be written into the text file
+            write a line to the log file
+            sends user message to server
+            clears txt message so user dosen't have to delete previous message
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.Form1_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Handle the closing of the application gracefully
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Assignment2.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment2.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment2.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment2.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Assignment2.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Assignment2.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

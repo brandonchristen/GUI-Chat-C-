@@ -16,23 +16,45 @@ namespace ChatLibrary
         static Int32 port = 13000;
         TcpClient TCPclient;
         NetworkStream stream;
-        bool flag = true;
+        public bool flag = true;
 
+        /// <summary>
+        /// connects to the server
+        /// </summary>
         public override void Connect()
         {
-            TCPclient = new TcpClient(server, port);
-            stream = TCPclient.GetStream();
+            try
+            {
+                TCPclient = new TcpClient(server, port);
+                stream = TCPclient.GetStream();
+            }
+            catch
+            {
+
+            }
 
         }
-
+        /// <summary>
+        /// close connection to server
+        /// </summary>
         public override void Close()
         {
-            // Close everything.
-            TCPclient.Close();
-            stream.Close();
+            try
+            {
+                // Close everything.
+                TCPclient.Close();
+                stream.Close();
+            }
+            catch
+            {
 
+            }
         }
 
+
+        /// <summary>
+        /// listens for incoming messages from the server and sends them to the message recieved event handler
+        /// </summary>
         public override void Listen()
         {
            while (flag)
@@ -49,7 +71,7 @@ namespace ChatLibrary
                         Int32 bytes = stream.Read(data, 0, data.Length);
                         recieveMessage = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
 
-                        MessageHandler(recieveMessage);
+                        MessageHandler(this, new MessageArgs(recieveMessage));
                     }
                     else
                     {
@@ -64,6 +86,12 @@ namespace ChatLibrary
             }
         }
 
+        /// <summary>
+        /// sends SentMessage to the server
+        /// </summary>
+        /// <param name="SentMessage">
+        /// The message the user types into txtMessage
+        /// </param>
         public override void Talk(String SentMessage)
         {
             try

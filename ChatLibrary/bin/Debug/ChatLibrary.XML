@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChatLibrary</name>
+    </assembly>
+    <members>
+        <member name="M:ChatLibrary.Client.Connect">
+            <summary>
+            connects to the server
+            </summary>
+        </member>
+        <member name="M:ChatLibrary.Client.Close">
+            <summary>
+            close connection to server
+            </summary>
+        </member>
+        <member name="M:ChatLibrary.Client.Listen">
+            <summary>
+            listens for incoming messages from the server and sends them to the message recieved event handler
+            </summary>
+        </member>
+        <member name="M:ChatLibrary.Client.Talk(System.String)">
+            <summary>
+            sends SentMessage to the server
+            </summary>
+            <param name="SentMessage">
+            The message the user types into txtMessage
+            </param>
+        </member>
+    </members>
+</doc>

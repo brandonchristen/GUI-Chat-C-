@@ -9,6 +9,19 @@ namespace LogLibrary
 {
     public class Logger
     {
+        /// <summary>
+        /// This will write a message that is being sent to it into a specified text file
+        
+        /// </summary>
+        /// 
+        /// <param name="FileName">
+        ///  the name of the file to save into
+        /// </param>
+        /// 
+        /// <param name="Message">
+        ///  the line that gets saved into the text file
+        /// </param>
+        
         public void WriteMessage(string FileName, String Message)
         {
             try
