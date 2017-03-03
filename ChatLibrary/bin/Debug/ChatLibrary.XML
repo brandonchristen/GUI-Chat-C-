@@ -4,6 +4,12 @@
         <name>ChatLibrary</name>
     </assembly>
     <members>
+        <member name="M:ChatLibrary.Client.#ctor(LogLibrary.ILoggingService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
         <member name="M:ChatLibrary.Client.Connect">
             <summary>
             connects to the server

@@ -8,7 +8,7 @@ using System.Net;
 
 namespace ChatLibrary
 {
-    public class Server : ParentClass
+    public class Server
     {
         TcpListener server = null;
         // Buffer for reading data
@@ -18,14 +18,14 @@ namespace ChatLibrary
         NetworkStream stream;
         String Message;
         
-        public override void Close()
+        public  void Close()
         {
             client.Close();
             server.Stop();
             stream.Close();
         }
 
-        public override void Connect()
+        public  void Connect()
         {
 
             try
@@ -59,7 +59,7 @@ namespace ChatLibrary
 
         }//end connect
 
-        public override void Listen()
+        public  void Listen()
         {
             // if theres data available send it to program.cs to be printed out
             if (stream.DataAvailable)
@@ -74,7 +74,7 @@ namespace ChatLibrary
 
         }
 
-        public override void Talk(String SentMessage)
+        public  void Talk(String SentMessage)
         {
             if (stream.CanWrite)
             {

@@ -4,29 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using LogLibrary;
 
 namespace ChatLibrary
 {
     
-    public class Client : ParentClass
+    public class Client
     {
         public MessageReceivedEventHandler MessageHandler;
-        public string message = "";
         static string server = "127.0.0.1";
         static Int32 port = 13000;
         TcpClient TCPclient;
         NetworkStream stream;
         public bool flag = true;
+        private  ILoggingService logger;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="logger"></param>
+        public Client(ILoggingService logger)
+        {
+            this.logger = logger;
+        }
+
+
+
 
         /// <summary>
         /// connects to the server
         /// </summary>
-        public override void Connect()
+        public void Connect()
         {
             try
             {
                 TCPclient = new TcpClient(server, port);
                 stream = TCPclient.GetStream();
+                logger.Log("Client connected to server");
             }
             catch
             {
@@ -37,13 +50,14 @@ namespace ChatLibrary
         /// <summary>
         /// close connection to server
         /// </summary>
-        public override void Close()
+        public  void Close()
         {
             try
             {
                 // Close everything.
                 TCPclient.Close();
                 stream.Close();
+                logger.Log("Client disconnected from server");
             }
             catch
             {
@@ -55,7 +69,7 @@ namespace ChatLibrary
         /// <summary>
         /// listens for incoming messages from the server and sends them to the message recieved event handler
         /// </summary>
-        public override void Listen()
+        public  void Listen()
         {
            while (flag)
             {
@@ -70,7 +84,7 @@ namespace ChatLibrary
                     {
                         Int32 bytes = stream.Read(data, 0, data.Length);
                         recieveMessage = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
-
+                        logger.Log("Server: " + recieveMessage);
                         MessageHandler(this, new MessageArgs(recieveMessage));
                     }
                     else
@@ -92,13 +106,15 @@ namespace ChatLibrary
         /// <param name="SentMessage">
         /// The message the user types into txtMessage
         /// </param>
-        public override void Talk(String SentMessage)
+        public  void Talk(String SentMessage)
         {
             try
             {
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(SentMessage);
                 // Send back a response.
+                logger.Log("Client: " + SentMessage);
                 stream.Write(msg, 0, msg.Length);
+                
             }
             catch
             {

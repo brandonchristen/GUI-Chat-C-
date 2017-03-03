@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ChatLibrary;
-using LogLibrary;
+//using LogLibrary;
+using Logging;
 using System.Windows.Forms;
 using System.Threading;
 
@@ -16,20 +17,18 @@ namespace Assignment2
     public partial class Form1 : Form
     {
         Thread workerThread;
-        Client client = new Client();
-        Logger logger = new Logger();
-        string FileName;
+        private Client client;
         string line;
 
-        /// <summary>
-        /// Starts the application and also writes to the log
-        /// </summary>
-        public Form1()
+        public Form1( Client client)
         {
-            FileName = "E:\\" + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss") + ".log";
+            this.client = client;
             client.MessageHandler += new ChatLibrary.MessageReceivedEventHandler(newMessage);
             InitializeComponent();
         }
+        /// <summary>
+        /// Starts the application and also writes to the log
+        /// </summary>
 
         /// <summary>
         /// Exit the application safely
@@ -52,8 +51,6 @@ namespace Assignment2
         /// <param name="e"></param>
         private void connect_click(object sender, EventArgs e)
         {
-            line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Client Connected From Server " + "\n";
-            logger.WriteMessage(FileName, line);
             btnSend.Enabled = true;
             client.Connect();
             Thread workerThread = new Thread(client.Listen);
@@ -69,8 +66,6 @@ namespace Assignment2
         private void disconnect_click(object sender, EventArgs e)
         {
             client.Close();
-            line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Client Disconnected From Server " + "\n";
-            logger.WriteMessage(FileName, line);
         }
 
         /// <summary>
@@ -88,16 +83,14 @@ namespace Assignment2
             {
 
                 txtConvo.Text += "Server: " + MessageArguments.message + "\r\n";
-                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Server: " + MessageArguments.message + "\n";
-                logger.WriteMessage(FileName, line);
+
             }));
             }
 
             else
             {
                 txtConvo.Text += "Server: " + MessageArguments .message +  "\r\n";
-                line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Server: " + MessageArguments.message + "\n";
-                logger.WriteMessage(FileName, line);
+                
             }
         }
 
@@ -115,8 +108,6 @@ namespace Assignment2
         {
             string UserMessage = txtMessage.Text;
             txtConvo.Text += "Client: " + UserMessage + "\r\n";
-            line = DateTime.Now.ToString("yyyy-MM-dd-HH:mm:ss") + " Client: " + UserMessage + "\n";
-            logger.WriteMessage(FileName, line);
             client.Talk(UserMessage);
             txtMessage.Clear();
         }

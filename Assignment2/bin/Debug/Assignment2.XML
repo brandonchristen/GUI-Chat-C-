@@ -4,12 +4,10 @@
         <name>Assignment2</name>
     </assembly>
     <members>
-        <member name="M:Assignment2.Form1.#ctor">
+        <member name="M:Assignment2.Form1.exit_click(System.Object,System.EventArgs)">
             <summary>
             Starts the application and also writes to the log
             </summary>
-        </member>
-        <member name="M:Assignment2.Form1.exit_click(System.Object,System.EventArgs)">
             <summary>
             Exit the application safely
             </summary>

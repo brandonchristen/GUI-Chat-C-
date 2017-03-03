@@ -4,3 +4,11 @@ E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\ChatLibr
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\ChatLibrary\obj\Debug\ChatLibrary.pdb
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\ChatLibrary\obj\Debug\ChatLibrary.csprojResolveAssemblyReference.cache
 E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment2\ChatLibrary\bin\Debug\ChatLibrary.XML
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\bin\Debug\ChatLibrary.XML
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\bin\Debug\ChatLibrary.dll
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\bin\Debug\ChatLibrary.pdb
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\bin\Debug\LogLibrary.dll
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\bin\Debug\LogLibrary.pdb
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\obj\Debug\ChatLibrary.csprojResolveAssemblyReference.cache
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\obj\Debug\ChatLibrary.dll
+E:\Year 2\Semester 2\Advanced OOP\Christen-Brandon-w0290029\Assignment3\ChatLibrary\obj\Debug\ChatLibrary.pdb
